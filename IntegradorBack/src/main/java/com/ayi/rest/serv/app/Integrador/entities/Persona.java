@@ -17,12 +17,12 @@ import java.util.List;
 @Entity
 @Table(name = "details")
 
-public class entity_persona {
+public class Persona {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_details")
-    private Long idDetails;
+    @Column(name = "id")
+    private Long id;
 
     @Column(name = "name", nullable = false, length = 15)
     private String name;
