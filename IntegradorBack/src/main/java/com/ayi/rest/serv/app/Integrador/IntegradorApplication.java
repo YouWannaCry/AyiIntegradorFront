@@ -1,5 +1,6 @@
 package com.ayi.rest.serv.app.Integrador;
 
+import com.ayi.rest.serv.app.Integrador.entity.Persona;
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 import org.springframework.boot.SpringApplication;
@@ -28,7 +29,9 @@ public class IntegradorApplication {
 
 		final String UserName = ("Rodrigo Egea");
 
-		final String Url = ("");
+		Persona persona = new Persona();
+
+		final String Url = ("https://www.google.com/maps/search/?api=1&query=" + persona.latitude + "%2c" + persona.longitude);
 
 		final String phoneNumber = ("5492634400151");
 
@@ -36,7 +39,7 @@ public class IntegradorApplication {
 
 		numbers.add("5492634400151");
 
-		Twilio.init("ACfcf196f9781b26183f56c87787187d7e", "1bf29d6a1bc1a2fea2e6f83bdd3b486d");
+		Twilio.init("", "");
 
 		for (String i: numbers) {
 
